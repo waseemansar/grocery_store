@@ -6,7 +6,7 @@ As this api server is build in Node Js Express framework with mongoldb using mon
 
 1. Clone this repository
 
-> git clone https://github.com/waseemansar/estore_backend.git
+> git clone https://github.com/waseemansar/grocery_store.git
 
 2. Navigate into the directory grocery_store
 
