@@ -7,9 +7,54 @@ const jwt = require('jsonwebtoken');
 const User = require('../models/User');
 const auth = require('../middleware/auth');
 
-// @route    GET users
-// @desc     Get all users
-// @access   Private: Admin
+/**
+ * @swagger
+ * /users:
+ *   get:
+ *     summary: Get list of users
+ *     parameters:
+ *       - in: header
+ *         name: x-auth-token
+ *         schema:
+ *           type: string
+ *         required: true
+ *     responses:
+ *       200:
+ *         description: List of users
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: array
+ *               items:
+ *                 type: object
+ *                 properties::
+ *                   _id:
+ *                     type: string
+ *                   name:
+ *                     type: string
+ *                   email:
+ *                     type: string
+ *                   gender:
+ *                     type: string
+ *                   phonenumber:
+ *                     type: number
+ *                   role:
+ *                     type: string
+ *                   createdAt:
+ *                     type: string
+ *               example:
+ *                 -  _id: 10
+ *                    name: Waseem Ansar
+ *                    email: Waseem Ansar
+ *                    gender: Waseem Ansar
+ *                    phonenumber: 971501234
+ *                    role: Waseem Ansar
+ *                    createdAt: 2021-08-19T10:46:53.035Z
+ *       401:
+ *         description: Error if no token provided
+ *       500:
+ *         description: Some server error
+ */
 router.get('/', auth, async (req, res) => {
 	if (req.user.role !== 'admin') return res.status(401).json({ errors: [{ msg: 'Not allowed to perform this operation' }] });
 
