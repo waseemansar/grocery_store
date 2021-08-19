@@ -22,3 +22,8 @@ As this api server is build in Node Js Express framework with mongoldb using mon
 
 Local server will run on
 https://localhost:30005
+
+### API Endpoints
+
+Users Registration
+https://localhost:30005/users/register
