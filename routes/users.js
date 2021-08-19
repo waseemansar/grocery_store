@@ -148,7 +148,7 @@ router.post(
  *       500:
  *         description: Some server error
  */
-router.get(
+router.post(
 	'/register',
 	[
 		check('name', 'Name is required').not().isEmpty(),
