@@ -16,7 +16,9 @@ As this api server is build in Node Js Express framework with mongoldb using mon
 
 > npm install
 
-4. Run local server with following command
+4. Rename .env.example file to .env and add your own MONGO_URI
+
+5. Run local server with following command
 
 > npm start
 
@@ -27,3 +29,15 @@ https://localhost:30005
 
 Users Registration
 https://localhost:30005/users/register
+
+Users Login
+https://localhost:30005/users/login
+
+Products Bulk Upload from CSV file
+https://localhost:30005/products
+
+Products Review
+https://localhost:30005/products/review
+
+Products Search
+https://localhost:30005/products/search?page=1
